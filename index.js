@@ -4,6 +4,8 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+const githubData=
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
@@ -19,6 +21,11 @@ res.send('<h1>plz login at chai or code</h1>')
 app.get('/youtube',(req,res)=>{
 res.send('<h2>mastiii...</h2>')
 })
+
+app.get('/github', (req,res)=>{
+res.json('github data')
+})
+
 app.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${port}`)
 })
